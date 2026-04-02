@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GT-Gargoyles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Serif', serif;
+      line-height: 1.6;
+      background: #512B8F;
+      color: #222;
+    }
+    header {
+      background: #1F1037;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a, .dropbtn {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: 'IBM Plex Serif', serif;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      z-index: 1;
+      margin-top: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .dropdown-content a {
+      color: #1F1037;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content,
+    .dropdown-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .dropdown:hover .dropbtn,
+    .dropdown:focus-within .dropbtn {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Gotham Tech Gargoyles</h1>
+  <p>Based in: Gotham Tech High School</p>
+  <nav>
+    <a href="homepage5.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="Donate.html">Donate</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">More ▼</button>
+      <div class="dropdown-content">
+      <a href="programming.html">Programming</a>
+      <a href="CAD.html">CAD</a>
+      <a href="Design.html">Design</a>
+      <a href="Build.html">Build</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Build</h2>
+    <p>Content for the Build page.</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Gotham Tech Gargoyles. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleDropdown() {
+  document.querySelector('.dropdown-content').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

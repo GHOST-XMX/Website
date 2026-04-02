@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GT-Gargoyles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Serif', serif;
+      line-height: 1.6;
+      background: #512B8F;
+      color: #222;
+    }
+    header {
+      background: #1F1037;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a, .dropbtn {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: 'IBM Plex Serif', serif;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      z-index: 1;
+      margin-top: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .dropdown-content a {
+      color: #1F1037;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content,
+    .dropdown-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .dropdown:hover .dropbtn,
+    .dropdown:focus-within .dropbtn {
+      color: #ffd700;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 16px;
+      padding: 18px;
+    }
+    footer {
+      text-align: center;
+      padding: 12px;
+      font-size: 0.9rem;
+      color: #000000;
+    }
+    .donate-hero {
+      background: linear-gradient(135deg, #1F1037 0%, #512B8F 100%);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .donate-hero h2 {
+      margin: 0 0 16px 0;
+      font-size: 2.5rem;
+    }
+    .donate-hero p {
+      margin: 8px 0;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .donate-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .donation-info {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .donation-info h3 {
+      color: #1F1037;
+      margin-top: 0;
+    }
+    .donation-info ul {
+      margin: 16px 0;
+      padding-left: 24px;
+    }
+    .donation-info li {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+    .embed-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .embed-container h3 {
+      color: #1F1037;
+      margin-top: 0;
+    }
+    .gfm-embed {
+      margin: 0 auto;
+    }
+    .donation-methods {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .donation-methods .embed-container {
+      flex: 1;
+      min-width: 300px;
+      margin-bottom: 0;
+    }
+    @media (max-width: 768px) {
+      .donation-methods {
+        flex-direction: column;
+      }
+      .donation-methods .embed-container {
+        min-width: 100%;
+      }
+    }
+    .supporters {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .supporters h3 {
+      color: #1F1037;
+      margin-top: 0;
+      text-align: center;
+    }
+    .donor-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .donor-list li {
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Gotham Tech Gargoyles</h1>
+  <p>Based in: Gotham Tech High School</p>
+  <nav>
+    <a href="homepage5.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="Donate.html">Donate</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">More ▼</button>
+      <div class="dropdown-content">
+      <a href="programming.html">Programming</a>
+      <a href="CAD.html">CAD</a>
+      <a href="Design.html">Design</a>
+      <a href="Build.html">Build</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="donate-hero">
+  <h2>Support Our Mission</h2>
+  <p>Help us inspire and empower the next generation of innovators through robotics.</p>
+  <p>Your donation directly funds our FTC team's growth, equipment, and competition travel.</p>
+</div>
+
+<div class="donate-container">
+  <div class="donation-info">
+    <h3>Why Donate?</h3>
+    <p>Gotham Tech Gargoyles is a student-led FTC Robotics team committed to fostering innovation, creativity, and collaboration. Your support helps us:</p>
+    <ul>
+      <li><strong>Build competitive robots</strong> – High-quality components, tools, and technology</li>
+      <li><strong>Travel to competitions</strong> – Regional and national tournaments across NYC and beyond</li>
+      <li><strong>Expand our reach</strong> – Outreach programs and mentorship for younger students</li>
+      <li><strong>Develop future leaders</strong> – STEM education that transforms lives and careers</li>
+    </ul>
+  </div>
+
+  <div class="donation-methods">
+    <div class="embed-container">
+      <h3>Make a Donation</h3>
+      <p>Support our team through GoFundMe. Every contribution helps us reach our goals!</p>
+      <div class="gfm-embed" data-url="https://www.gofundme.com/f/mjv3w-help-support-our-robotics-team/widget/large?sharesheet=undefined&attribution_id=sl:29d0cc74-25fe-4580-acc4-c241e2613d19"></div>
+      <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    </div>
+
+    <div class="embed-container">
+      <h3>Donate via Hack Club</h3>
+      <p>Support our team through Hack Club's donation platform!</p>
+      <iframe src="https://hcb.hackclub.com/donations/start/gt-gargoyles" style="border:none; width:100%; max-width:400px; margin:0 auto; display:block;" name="donateFrame" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="520px" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="supporters">
+    <h3>Thank You to Our Supporters</h3>
+    <p>We are deeply grateful for the generous support from our community. Your contributions help us continue our mission to inspire and empower the next generation of innovators. Here are some of our valued donors:</p>
+    <ul class="donor-list">
+      <li>John Doe</li>
+      <li>Jane Smith</li>
+      <li>Tech Innovators Inc.</li>
+      <li>Anonymous Donor</li>
+      <li>Mary Johnson</li>
+      <li>Robert Lee</li>
+      <li>Gotham Community Fund</li>
+      <li>Emily Davis</li>
+      <li>Michael Brown</li>
+      <li>Sarah Wilson</li>
+      <li>David Garcia</li>
+      <li>Lisa Martinez</li>
+      <li>Chris Anderson</li>
+      <li>Patricia Taylor</li>
+      <li>James Thomas</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Gotham Tech Gargoyles. All rights reserved.</p>
+</footer>
+<script>
+function toggleDropdown() {
+  document.querySelector('.dropdown-content').classList.toggle('open');
+}
+</script>
+</body>
+</html>

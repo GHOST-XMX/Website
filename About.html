@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GT-Gargoyles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Serif', serif;
+      line-height: 1.6;
+      background: #512B8F;
+      color: #222;
+    }
+    header {
+      background: #1F1037;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a, .dropbtn {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: 'IBM Plex Serif', serif;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      z-index: 1;
+      margin-top: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .dropdown-content a {
+      color: #1F1037;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content,
+    .dropdown-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .dropdown:hover .dropbtn,
+    .dropdown:focus-within .dropbtn {
+      color: #ffd700;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 16px;
+      padding: 18px;
+    }
+    footer {
+      text-align: center;
+      padding: 12px;
+      font-size: 0.9rem;
+      color: #000000;
+    }
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .member {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .member:hover {
+      border-color: #000;
+    }
+    .member h3 {
+      margin-top: 0;
+      color: #1F1037;
+    }
+    .member p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .mentors {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .mentor-card {
+      width: 300px;
+      max-width: 100%;
+    }
+    .members h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Gotham Tech Gargoyles</h1>
+  <nav>
+    <a href="homepage5.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="Donate.html">Donate</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">More ▼</button>
+      <div class="dropdown-content">
+        <a href="programming.html">Programming</a>
+        <a href="CAD.html">CAD</a>
+        <a href="Design.html">Design</a>
+        <a href="Build.html">Build</a>
+
+      </div>
+    </div>
+  </nav>
+</header>
+  <main>
+    <section>
+      <h2>About Gotham Tech Gargoyles</h2>
+      <p>We are a team of innovative engineers and designers dedicated to pushing the boundaries of technology and creativity. Our mission is to build cutting-edge solutions that inspire and transform industries. Join us in our journey to innovate and create impactful projects.</p>
+    </section>
+    <section class="members">
+      <h2>Our Team</h2>
+      
+      <div class="mentors">
+        <div class="member mentor-card">
+          <h3>Derek Calle</h3>
+          <p>This mentor provides invaluable guidance and wisdom from years of experience. They mentor the team in strategic decision-making and long-term planning. Their insights have shaped our project's direction and success.</p>
+        </div>
+        <div class="member mentor-card">
+          <h3>John Lento</h3>
+          <p>This mentor specializes in advanced technical expertise and innovation. They inspire the team with cutting-edge knowledge and best practices. Their mentorship fosters growth and excellence in our work.</p>
+        </div>
+      </div>
+      <div class="members-grid">
+        <div class="member">
+          <h3>Jayden Guzman</h3>
+          <p>This member brings extensive experience in software development. They have contributed to numerous projects with innovative solutions. Their dedication ensures high-quality outcomes.</p>
+        </div>
+        <div class="member">
+          <h3>Daniel Avero</h3>
+          <p>This member specializes in design and user experience. They focus on creating intuitive interfaces that delight users. Their creativity drives our visual identity.</p>
+        </div>
+        <div class="member">
+          <h3>Dylan Garcia</h3>
+          <p>This member excels in project management and coordination. They ensure teams work efficiently towards common goals. Their leadership keeps projects on track.</p>
+        </div>
+        <div class="member">
+          <h3>Alexander Gonzales</h3>
+          <p>This member is an expert in data analysis and visualization. They turn complex data into actionable insights. Their work informs strategic decisions.</p>
+        </div>
+        <div class="member">
+          <h3>Reynardgadi Lie</h3>
+          <p>This member focuses on hardware integration and prototyping. They bridge the gap between software and physical devices. Their hands-on approach leads to tangible results.</p>
+        </div>
+        <div class="member">
+          <h3>Dylan Velazquez</h3>
+          <p>This member is passionate about cybersecurity and protection. They safeguard our systems from potential threats. Their vigilance ensures data integrity.</p>
+        </div>
+        <div class="member">
+          <h3>Razi Khalki</h3>
+          <p>This member specializes in machine learning and AI. They develop intelligent algorithms for automation. Their innovations enhance our capabilities.</p>
+        </div>
+        <div class="member">
+          <h3>Bradley Saavedra</h3>
+          <p>This member handles marketing and community outreach. They build connections and promote our work. Their efforts expand our reach.</p>
+        </div>
+        <div class="member">
+          <h3>Julianna Montero</h3>
+          <p>This member is skilled in quality assurance and testing. They ensure products meet high standards. Their attention to detail prevents issues.</p>
+        </div>
+        <div class="member">
+          <h3>Nicole Sandoval</h3>
+          <p>This member contributes to research and development. They explore new technologies and trends. Their curiosity drives our forward momentum.</p>
+        </div>
+        <div class="member">
+          <h3>Kent Torres</h3>
+          <p>This member focuses on sustainability and eco-friendly practices. They integrate green solutions into our projects. Their commitment supports environmental goals.</p>
+        </div>
+        <div class="member">
+          <h3>German Parra</h3>
+          <p>This member excels in client relations and support. They provide excellent service and feedback. Their communication strengthens partnerships.</p>
+        </div>
+        <div class="member">
+          <h3>Jessica Calista</h3>
+          <p>This member is an expert in cloud computing and infrastructure. They optimize our digital resources. Their efficiency improves performance.</p>
+        </div>
+        <div class="member">
+          <h3>Deiby Rengifo</h3>
+          <p>This member specializes in mobile app development. They create seamless experiences across devices. Their apps engage users worldwide.</p>
+        </div>
+        <div class="member">
+          <h3>Kayden Ku</h3>
+          <p>This member handles documentation and knowledge sharing. They organize information for easy access. Their work preserves our collective wisdom.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Gotham Tech Gargoyles. All rights reserved.</p>
+  </footer>
+  <script>
+function toggleDropdown() {
+  document.querySelector('.dropdown-content').classList.toggle('open');
+}
+</script>
+</body>
