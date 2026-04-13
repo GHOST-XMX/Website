@@ -195,6 +195,54 @@
       text-align: center;
       font-weight: 500;
     }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a, .dropbtn {
+        margin: 5px 0;
+        font-size: 0.9rem;
+      }
+      .dropdown-content {
+        position: static;
+        display: none;
+        max-height: none;
+        opacity: 1;
+        box-shadow: none;
+        background: #1F1037;
+        margin-top: 0;
+      }
+      .dropdown-content a {
+        color: #fff;
+        padding: 8px 0;
+      }
+      .dropdown-content a:hover {
+        background: #ffd700;
+        color: #1F1037;
+      }
+      .dropdown:hover .dropdown-content,
+      .dropdown:focus-within .dropdown-content,
+      .dropdown-content.open {
+        display: block;
+      }
+      main {
+        padding: 0 8px;
+        margin: 16px auto;
+      }
+      section {
+        padding: 12px;
+      }
+      .donor-list {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
