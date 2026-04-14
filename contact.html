@@ -244,9 +244,11 @@
 function toggleDropdown() {
   document.querySelector('.dropdown-content').classList.toggle('open');
 }
-document.addEventListener('DOMContentLoaded', function() {
+function showPage() {
   document.body.classList.add('loaded');
-});
+}
+window.addEventListener('DOMContentLoaded', showPage);
+window.addEventListener('pageshow', showPage);
 </script>
 </body>
 </html>
