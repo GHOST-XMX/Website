@@ -15,11 +15,6 @@
       line-height: 1.6;
       background: #512B8F;
       color: #222;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    body.loaded {
-      opacity: 1;
     }
     header {
       background: #1F1037;
@@ -310,8 +305,5 @@
 function toggleDropdown() {
   document.querySelector('.dropdown-content').classList.toggle('open');
 }
-document.addEventListener('DOMContentLoaded', function() {
-  document.body.classList.add('loaded');
-});
 </script>
 </body>
