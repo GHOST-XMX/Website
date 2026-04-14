@@ -1,3 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GT-Gargoyles - CAD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Serif', serif;
+      line-height: 1.6;
+      background: #512B8F;
+      color: #222;
+    }
+    header {
+      background: #1F1037;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a, .dropbtn {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: 'IBM Plex Serif', serif;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      z-index: 1;
+      margin-top: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+    .dropdown-content a {
+      color: #1F1037;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content,
+    .dropdown-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .dropdown:hover .dropbtn,
+    .dropdown:focus-within .dropbtn {
+      color: #ffd700;
+    }
+    main {
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 16px;
+      padding: 18px;
+    }
+    footer {
+      text-align: center;
+      padding: 12px;
+      font-size: 0.9rem;
+      color: #000000;
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a, .dropbtn {
+        margin: 5px 0;
+        font-size: 0.9rem;
+      }
+      .dropdown-content {
+        position: static;
+        display: none;
+        max-height: none;
+        opacity: 1;
+        box-shadow: none;
+        background: #1F1037;
+        margin-top: 0;
+      }
+      .dropdown-content a {
+        color: #fff;
+        padding: 8px 0;
+      }
+      .dropdown-content a:hover {
+        background: #ffd700;
+        color: #1F1037;
+      }
+      .dropdown:hover .dropdown-content,
+      .dropdown:focus-within .dropdown-content,
+      .dropdown-content.open {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GT-Gargoyles</h1>
+    <p>CAD & Design</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">More ▼</button>
+        <div class="dropdown-content">
+          <a href="programming.html">Programming</a>
+          <a href="cad.html">CAD</a>
+          <a href="design.html">Design</a>
+          <a href="build.html">Build</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Computer-Aided Design</h2>
+      <p>Our CAD team creates detailed digital prototypes for every robot project. We use precision modeling, rapid iteration, and real-world assembly checks to turn ideas into parts that fit, move, and perform as expected.</p>
+    </section>
+    <section>
+      <h2>Software & Workflow</h2>
+      <p>We design with industry-standard CAD tools, then review every model with the build and programming teams. That collaborative process helps us catch clearance issues, improve strength, and refine mechanisms before fabrication begins.</p>
+      <ul>
+        <li>3D modeling of chassis, mechanisms, and assemblies</li>
+        <li>Linkage and motion studies</li>
+        <li>Bill of materials planning and cut list preparation</li>
+      </ul>
+    </section>
+    <section>
+      <h2>From Concept to Robot</h2>
+      <p>CAD is where we move from sketches to a complete digital robot. We validate designs with virtual fits, then export files for CNC, laser cutting, and 3D printing so the build team can turn the model into a working machine.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Gotham Tech Gargoyles. All rights reserved.</p>
+  </footer>
+  <script>
+    function toggleDropdown() {
+      document.querySelector('.dropdown-content').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
